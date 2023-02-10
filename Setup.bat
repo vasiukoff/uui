@@ -1,16 +1,17 @@
 @echo off
 cd %~dp0
 set drive=%cd:~0,2%
-echo USB Unnatended installator for Enterprise Linux
+echo uui - USB unnatended installator for Enterprise Linux
 echo (C) Artemy Vasiukov, avv@cranix.org  2012-2023
 echo Self updating...
 
-set /p debug="yep"
+set debug="yep"
 
-cd src
 
-rmdir /s /q uui
-..\git\cmd\git.exe clone https://github.com/vasiukoff/uui.git
+
+..\git\cmd\git.exe clone https://github.com/vasiukoff/uui.git 2> nul
+..\git\cmd\git.exe pull https://github.com/vasiukoff/uui.git
+
 
 
 echo Your drive is %drive%
@@ -25,8 +26,15 @@ exit
 
 :next
 if not defined debug (
-cd syslinux
-syslinux -m -a  -d /syslinux %drive%
+
+	cd syslinux
+	syslinux -m -a  -d /syslinux %drive%
+	pause
+	exit
+
+) else (
+
+	pause
+
 )
-pause
-exit
+
