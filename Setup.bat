@@ -24,6 +24,13 @@ if %ERRORLEVEL% == 0 goto :skipsafe
 :skipsafe	
 
 cd ..
+echo Updating all files...
+
+
+
+xcopy .\uui\* %cd% /H /Y /C /R /S
+
+
 
 echo Your drive is %drive%
 

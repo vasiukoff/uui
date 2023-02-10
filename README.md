@@ -27,7 +27,7 @@ See particular [kickstart files](https://linuxhint.com/beginners-kickstart/) in 
 
 ## How to use
 
-1. Download and unpack **uui.zip** to the root folder on your USB pendrive.
+1. Download and unpack **uui-master.zip** to the root folder on your USB pendrive.
 2. Place **install.img** from your installation cd to **/images** folder.
 3. Place **vmlinuz** and **initrd.img** from your installation cd to **/syslinux** folder.
 4. Rename your USB pendrive to "***SETUP***" (without quotes).
