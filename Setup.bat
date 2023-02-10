@@ -8,11 +8,22 @@ echo Self updating...
 set debug="yep"
 
 
+if not exist uui git\cmd\git.exe clone https://github.com/vasiukoff/uui.git 
 
-..\git\cmd\git.exe clone https://github.com/vasiukoff/uui.git 2> nul
-..\git\cmd\git.exe pull https://github.com/vasiukoff/uui.git
+cd uui
 
+set str=%cd%
+set safedir=%str:\=/%
+..\git\cmd\git.exe pull  https://github.com/vasiukoff/uui.git master
 
+if %ERRORLEVEL% == 0 goto :skipsafe
+	echo Autofixing directory in Git global configuration
+	git config --global --add safe.directory %safedir%
+	..\git\cmd\git.exe pull  https://github.com/vasiukoff/uui.git master
+
+:skipsafe	
+
+cd ..
 
 echo Your drive is %drive%
 
@@ -27,6 +38,7 @@ exit
 :next
 if not defined debug (
 
+	echo Installig SYSLINUX..
 	cd syslinux
 	syslinux -m -a  -d /syslinux %drive%
 	pause
