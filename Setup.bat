@@ -23,9 +23,11 @@ if %ERRORLEVEL% == 0 goto :skipsafe
 cd ..
 echo Updating all files...
 
-
-
 xcopy .\uui\* %cd%  /H /Y /C /R /S /EXCLUDE:%cd%uui\exclude.txt
+
+
+
+
 
 
 
@@ -41,6 +43,9 @@ pause
 :next
 
 echo Installig SYSLINUX..
+
 cd syslinux
 syslinux -m -a  -d /syslinux %drive%
+cd ..
+
 pause
