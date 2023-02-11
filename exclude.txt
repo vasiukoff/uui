@@ -1,3 +1,11 @@
 .git\
 git\
 exclude.txt
+*.tbl
+*.exe
+*.bin
+*.sys
+*.c32
+memtest
+*.cat
+*.msg
