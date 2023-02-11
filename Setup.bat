@@ -5,7 +5,7 @@ echo uui - USB unnatended installator for Enterprise Linux
 echo (C) Artemy Vasiukov, avv@cranix.org  2012-2023
 echo Self updating...
 
-set debug="yep"
+rem set debug="yep"
 
 
 if not exist uui git\cmd\git.exe clone https://github.com/vasiukoff/uui.git 
