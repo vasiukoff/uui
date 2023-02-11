@@ -28,7 +28,7 @@ echo Updating all files...
 
 
 
-xcopy .\uui\* %cd% /EXCLUDE:%cd%\exclude.txt /H /Y /C /R /S
+xcopy .\uui\* %cd%  /H /Y /C /R /S /EXCLUDE:%cd%uui\exclude.txt
 
 
 
