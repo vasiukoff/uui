@@ -4,8 +4,8 @@ rem Config section
 
 set branch="master"
 set i.url="https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/install.img"
-set v.url="https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/isolinux/vmlinuz"
-set ir.url="https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/isolinux/initrd.img"
+set v.url="https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/pxeboot/vmlinuz"
+set ir.url="https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/pxeboot/initrd.img"
 
 rem End of Config section
 

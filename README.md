@@ -10,32 +10,36 @@ See particular [kickstart files](https://linuxhint.com/beginners-kickstart/) in 
 
 ## Prerequisites
 
-- You should have **install.img**, **vmlinuz** and **initrd.img** from any mirror of your EL9 distro. 
+- You should point **install.img**, **vmlinuz** and **initrd.img**  for your EL9 distro. 
 
-  - For Rocky Linux 9 see: https://mirrors.rockylinux.org/mirrormanager/mirrors
-    - Direct links to  **install.img**, **vmlinuz** and **initrd.img**: 
-      - https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/install.img
-      - https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/pxeboot/vmlinuz
-      - https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/pxeboot/initrd.img
-  - For Oracle Linux 9 see: https://yum.oracle.com/oracle-linux-isos.html
+  These files used by default  in **setup.bat** (change it if necessary):
+  - https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/install.img
+  - https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/pxeboot/vmlinuz
+  - https://mirror.yandex.ru/rockylinux/9/BaseOS/x86_64/os/images/pxeboot/initrd.img
+  
+- If you want to use your own branch name, change it in **setup.bat**. Default name is "master".
 
 - You should have an Internet connection during running **setup.bat**.
 
-- You should have a wired Internet connection (Ethernet) with DHCP option during installation process.
+- You should have a wired Internet connection (Ethernet) with DHCP option during installation process for your server.
 
   
 
 ## How to use
 
-1. Download and unpack **uui-master.zip** to the root folder on your USB pendrive.
-2. Place **install.img** from your installation cd to **/images** folder.
-3. Place **vmlinuz** and **initrd.img** from your installation cd to **/syslinux** folder.
-4. Rename your USB pendrive to "***SETUP***" (without quotes).
-5. Run **setup.bat** as administrator.
+1. Download and unpack **uui-master.zip** to the root folder on your USB pen drive.
+4. Rename your USB pen drive to "***SETUP***" (without quotes).
+5. Run **setup.bat** as administrator. Process will prepare everything you'll need. 
 6. Plug Ethernet cable to your server. 
-7. Boot from USB.
+7. Boot from newly created USB pen drive.
 8. Choose one of the ready to use configurations and press Enter.
 9. Enjoy!
+
+
+
+## How to contribute
+
+Just made a merge request.
 
 
 
